@@ -5,6 +5,7 @@
 
 	<head>
 		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Dream Builders | Consulting</title>
 		<link rel="stylesheet" type="text/css" href="./CSS/one_page_website.css">
 	</head>
@@ -17,7 +18,7 @@
 			
 				<a href="#home">HOME |</a>
 				<a href="#gallery">GALLERY</a>
-				<a href="#video">| PROJECT VIDEO</a>
+                <a href="#video">| PROJECT VIDEO</a>
 				<a href="#consultation">| CONSULTATION</a>
 				<br>
 				<br>
@@ -33,7 +34,7 @@
 			<div>
 				<span>
 				<font color="orange" face="verdana" size="6">
-				We make your dreams come true!</font>
+				We make your dreams come true!</font><br><br><br>
 				</span>
 			</div>
 		</div>
@@ -43,122 +44,79 @@
 	<!--GALLERY-->
 	<section>
 		<div id="gallery">
-			<h1>
-			<font color="green" face="arial">
-			Gallery of Services
-			</h1>
-			<div>
-			
-				<!--Photo Container 1-->
-				<div>
-					<div>
-						<img src="./photos/thumb_1.jpg" width="300" height="250" alt="House">
-						<div>
-							<p>House Construction</p>
-						</div>
-					</div>
-				</div>
-				<!--End of Photo Container 1-->
-				
-				<!--Photo Container 2-->
-				<div>
-					<div>
-						<img src="./photos/thumb_2.jpg" width="300" height="250" alt="Kids Playground">
-						<div>
-							<p>Kids Playground</p>
-						</div>
-					</div>
-				</div>
-				<!--End of Photo Container 2-->
+            <!-- Images used to open the lightbox -->
+            <div class="row">
+                <div class="column">
+                    <img src="photos/thumb_1_small.jpg" style="width: 100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+                </div>
+                <div class="column">
+                    <img src="photos/thumb_2_small.jpg" style="width: 100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+                </div>
+                <div class="column">
+                    <img src="photos/thumb_3_small.jpg" style="width: 100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+                </div>
+                <div class="column">
+                    <img src="photos/thumb_4_small.jpg" style="width: 100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+               </div>
+  
+            <!-- The Modal/Lightbox -->
+            <div id="myModal" class="modal">
+                <span class="close cursor" onclick="closeModal()">&times;</span>
+                <div class="modal-content">
 
-				<!--Photo Container 3-->
-				<div>
-					<div>
-						<img src="./photos/thumb_3.jpg" width="300" height="250" alt="Fence">
-						<div>
-							<p>Building Fences</p>
-						</div>
-					</div>
-				</div>
-				<!--End of Photo Container 3-->
-				
-				<!--Photo Container 4-->
-				<div>
-					<div>
-						<img src="./photos/thumb_4.jpg" width="300" height="250" alt="Pool">
-						<div>
-							<p>Pools of different size</p>
-						</div>
-					</div>
-				</div>
-				<!--End of Photo Container 4-->
-				
-				<!--Photo Container 5-->
-				<div>
-					<div>
-						<img src="./photos/thumb_5.jpg" width="300" height="250" alt="Garage">
-						<div>
-							<p>Garage and Storage area</p>
-						</div>
-					</div>
-				</div>
-				<!--End of Photo Container 5-->
-				
-				<!--Photo Container 6-->
-				<div>
-					<div>
-						<img src="./photos/thumb_6.jpg" width="300" height="250" alt="Garden">
-						<div>
-							<p>Backyard and Garden Beautification</p>
-						</div>
-					</div>
-				</div>
-				<!--End of Photo Container 6-->
-				
-				<!--Photo Container 7-->
-				<div>
-					<div>
-						<img src="./photos/thumb_7.jpg" width="300" height="250" alt="Basement">
-						<div>
-							<p>Basement and House Renovation</p>
-					</div>
-				</div>
-				<!--End of Photo Container 7-->
-				
-				<!--Photo Container 8-->
-				<div>
-					<div>
-						<img src="./photos/thumb_8.jpg" width="300" height="250" alt="Office">
-						<div>
-							<p>Office Renovation</p>
-						</div>
-					</div>
-				</div>
-				<!--End of Photo Container 8-->
-				
-				<!--Photo Container 9-->
-				<div>
-					<div>
-						<img src="./photos/thumb_9.jpg" width="300" height="250" alt="Patio">
-						<div>
-							<p>Patio Installation/Construction</p>
-						</div>
-					</div>
-				</div>
-				<!--End of Photo Container 9-->
-				
-				<div>
-					<br>
-					<br>
-					<h1>We can almost build anything!</h1>
-					<p>Tons of designs to choose from!</p>
-				</div>
-			</div>
-		</div>
-	</section>
+                  <div class="mySlides">
+                    <div class="numbertext">1 / 4</div>
+                    <img src="photos/thumb_1.jpg" style="width:100%">
+                  </div>
+  
+                  <div class="mySlides">
+                    <div class="numbertext">2 / 4</div>
+                    <img src="photos/thumb_2.jpg" style="width:100%">
+                  </div>
+  
+                 <div class="mySlides">
+                    <div class="numbertext">3 / 4</div>
+                    <img src="photos/thumb_3.jpg" style="width:100%">
+                 </div>
+  
+                 <div class="mySlides">
+                    <div class="numbertext">4 / 4</div>
+                    <img src="photos/thumb_4.jpg" style="width:100%">
+                 </div>
+  
+                    <!-- Next/previous controls -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
+                    <!-- Caption text -->
+                    <div class="caption-container">
+                         <p id="caption"></p>
+                    </div>
+  
+                    <!-- Thumbnail image controls -->
+                    <div class="column">
+                        <img class="demo" src="photos/thumb_1_small.jpg" style="width: 100%" onclick="currentSlide(1)" alt="House Construction">
+                    </div>
+            
+                    <div class="column">
+                        <img class="demo" src="photos/thumb_2_small.jpg" style="width: 100%" onclick="currentSlide(2)" alt="Kids Playground">
+                    </div>
+            
+                    <div class="column">
+                        <img class="demo" src="photos/thumb_3_small.jpg" style="width: 100%" onclick="currentSlide(3)" alt="Building Fences">
+                    </div>
+            
+                    <div class="column">
+                        <img class="demo" src="photos/thumb_4_small.jpg" style="width: 100%" onclick="currentSlide(4)" alt="Pools of different sizes">
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+			
 	<!--End of Gallery-->
-	
-	<!--Video-->
+
+    <!--Video-->
 	<section>
 		<div id="video">
 			<font color="orange" face="calibri">
@@ -169,6 +127,7 @@
 	
 	</section>
 	<!--End of Video-->
+
 
 	
 	<!--RSVP-->
@@ -218,6 +177,8 @@
 	</div>
 	
 	<!--End of Footer-->
+
+    <script src="JS/one_page_website.js" defer></script>
 	
 	</body>
 
